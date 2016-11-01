@@ -15,7 +15,7 @@ jQuery(function($, undefined) {
     }, {
         greetings: 'Javascript Interpreter',
         name: 'js_demo',
-        height: 200,
+        height: document.height,
         prompt: 'js> '
     });
 });
