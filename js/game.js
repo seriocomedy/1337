@@ -1,3 +1,8 @@
+var help = {
+    "all": function() {
+    }
+};
+
 var commands = {
     help: function (term, args) {
         if (args) {
