@@ -1,13 +1,23 @@
+var commands = {
+    help: function (term, args) {
+        if (args) {
+            term.echo (help[args.topic]);
+        } else {
+            term.echo (help["all"]);
+        }
+    }
+};
+
 jQuery(function($, undefined) {
     $('#terminal').terminal(function(command, term) {
         if (command !== '') {
-            try {
-                var result = window.eval(command);
-                if (result !== undefined) {
-                    term.echo(new String(result));
+            var c = command.split(' ');
+            if (c[0] in commands) {
+                if (c[1]) {
+                    commands[c[0]](term, JSON.deserialize(c[1]));
+                } else {
+                    commands[c[0]](term, null);
                 }
-            } catch(e) {
-                term.error(new String(e));
             }
         } else {
            term.echo('');
