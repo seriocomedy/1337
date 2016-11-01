@@ -15,7 +15,7 @@ jQuery(function($, undefined) {
     }, {
         greetings: '1337 Version 1.0',
         name: 'terminal',
-        height: 500,
+        height: 720,
         prompt: '> '
     });
 });
