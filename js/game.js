@@ -13,9 +13,9 @@ jQuery(function($, undefined) {
            term.echo('');
         }
     }, {
-        greetings: 'Javascript Interpreter',
-        name: 'js_demo',
-        height: document.height,
-        prompt: 'js> '
+        greetings: '1337 Version 1.0',
+        name: 'terminal',
+        height: window.height,
+        prompt: '> '
     });
 });
