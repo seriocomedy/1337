@@ -1,5 +1,3 @@
-var windowHeight = window.height;
-
 jQuery(function($, undefined) {
     $('#terminal').terminal(function(command, term) {
         if (command !== '') {
@@ -17,7 +15,7 @@ jQuery(function($, undefined) {
     }, {
         greetings: '1337 Version 1.0',
         name: 'terminal',
-        height: windowHeight,
+        height: 500,
         prompt: '> '
     });
 });
