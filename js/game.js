@@ -19,7 +19,7 @@ jQuery(function($, undefined) {
             var c = command.split(' ');
             if (c[0] in commands) {
                 if (c[1]) {
-                    commands[c[0]](term, JSON.deserialize(c[1]));
+                    commands[c[0]](term, JSON.parse(c[1]));
                 } else {
                     commands[c[0]](term, null);
                 }
